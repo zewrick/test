@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HM Asociados</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="icon" href="imgs/hm_icon.ico" />
+    
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor-header">
+            <img src="imgs/logohma.png" alt="logo">
+        </div>
+    </header>
+
+    <main class="main">
+      <section id="banner">
+       <div class="contenedor-main">
+        <video width="800" poster="imgs/cover.jpg"  autoplay controls controlsList="nodownload" loop>
+          <source src="vids/inicio.mp4" type="video/mp4">
+          Tu navegador no soporta vídeo en HTML5.
+        </video>
+         <div class="buttons">
+          <p class="sesion"><a href="#mostrar-sesion">Iniciar sesión</a></p>
+          <p class="info"><a href="mas-info/info.html">Más información</a></p>
+      </div>
+          </div>
+      </section>
+      
+      <div class="form" id="mostrar-sesion">
+          
+          <form action="">
+             
+              <a href="#" class="cerrar"><p>X</p></a>
+              <h3>Iniciar sesión</h3>
+              <input type="email" placeholder="&#128231; E-mail" name="e-mail">
+              <input type="password" placeholder="&#128273; Código de asociado" name ="codigo">
+              <input type="submit" formaction="login/asociados.html" value="Ingresar">
+          </form>
+      </div>
+        
+    </main>
+    
+    <footer class="footer">
+        <p></p>
+    </footer>
+    <script src="js/jquery.js"></script>
+</body>
+</html>

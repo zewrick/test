@@ -1,0 +1,332 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+
+body  {
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+	
+}
+
+
+
+.main {
+    font-size: 0.85em;
+}
+
+.contenedor-header  {
+    width: 95%;
+    margin: auto;
+}
+
+
+section, aside {
+    width: 95%;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+.contenedor-main {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;   
+}
+
+p  {
+	text-align: justify;
+	font-size: 17px;
+}
+
+h1, h2, h3, h4  {
+	text-align: center;
+}
+/*------------ HEADER - TITULO ---------*/
+
+header {
+    height: 60px;
+	width: 100%;
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #e8e9ee;
+    padding-bottom: 10px;
+}
+
+
+.header .contenedor-header .logo {
+    padding-top: 3px;
+    width: 130px;
+    float: left;
+}
+
+
+/*------------ MENU ----------*/
+
+#menu-sanguche:checked ~ .menu {
+	transform: translateX(0%);
+}
+
+
+#menu-sanguche {
+	display: none;
+}
+
+
+label[for="menu-sanguche"]{
+	float:right;
+	cursor: pointer;
+	margin: 14px 0px;
+	
+}
+
+header .contenedor-header {
+	display: table;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul ul {
+    display: none;
+    background: rgba(0,0,0,0.06);
+}
+
+.menu a {
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.menu a span {
+    margin-left: 10px;
+}
+
+.menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 80%;
+    transform: translateX(100%);
+    transition: all 0.4s;
+}
+
+.menu ul {
+    flex-direction: column;
+    background: #fff;
+}
+
+.menu ul ul a {
+    padding-left: 25px;
+}
+
+.menu  a {
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.menu a span {
+    position: absolute;
+    right: 20px;
+}
+
+.icon-arrow.active {
+    transform: rotate(180deg);
+}
+
+.submenu .icon-subitem img {
+	display: none;
+}
+
+
+/*---------------------  MENU icon X --------------------------*/
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #333;
+    margin-top:4px;
+	transition: 0.4s;
+	border-radius: 5px;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px) ;
+    transform: rotate(-45deg) translate(-7px, 5px) ;
+	padding-top: 5px;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -7px) ;
+    transform: rotate(45deg) translate(-7px, -7px) ;
+}
+
+
+/*------------ BUSQUEDA ----------*/
+
+.whead {
+	margin-top: 70px;
+	display: flex;
+	width: 100%;
+	
+}
+
+.whead input {
+	width: 95%;
+	margin-right: 5px;
+}
+
+.whead button {
+	width: 25px; 
+}
+
+.busqueda table td{
+	padding: 5px 0px;
+}
+
+
+.busqueda table a {
+	text-decoration: none;
+	color: #000;
+}
+
+/*------------ banner ----------*/
+
+.banner-aside {
+	margin-top: 60px;
+}
+.contenedor-main img {
+	width: 100%;
+}
+
+/*--- DESCRIPCION --------*/
+
+
+
+
+/*--- SOBRE HM --------*/
+
+.about-us  {
+	padding-bottom: 15px;
+}
+
+
+/*------ RESPONSIVE -----*/
+
+@media (min-width:1024px) {
+  section, .contenedor-header, main {
+	  width: 70%;
+}
+    .contenedor-main {
+        padding: 20px 0px; 
+}
+    
+	label[for="menu-sanguche"]{
+	display: none;
+}
+	
+	.header .contenedor-header .logo  {
+		float: none;
+		margin: auto;
+}
+	
+	.menu {
+		transform: none;
+		position: relative;
+		width:100%;
+		text-align: center;
+		top: 8px;
+}
+	
+	.menu a {
+    display: block;
+    padding: 15px 0px;
+    text-decoration: none;
+    color: #000;
+	border-bottom: none;
+		
+}
+		.menu a:hover {
+		background: #f7f7f7;
+}
+	
+	.menu ul {
+		flex-direction: row;
+		width: 100%;
+		border-bottom: 0.3px solid rgba(0,0,0,0.6);
+}
+
+	.menu ul li:hover ul {
+		display: flex;
+		background: #fff;
+		position: absolute;
+		left: 0;
+}
+	
+	.menu ul li {
+		width: 100%;
+		justify-content: center;
+}
+	
+	
+	
+	.menu ul ul a {
+		width: 100%;
+		justify-content: space-around;
+}
+	.menu ul ul a img {
+		margin: auto;
+}
+
+	
+	.menu a span {
+    position: relative;
+	left: 5px;
+	
+}
+	.submenu .icon-subitem img {
+	display: block;
+}
+	.icon-subitem {
+		padding: 10px;
+}
+	.icon-subitem img {
+	padding-bottom: 10px;	
+}
+
+	.main {
+		padding-top: 60px;
+		margin: auto;	
+}
+	.whead {
+	padding-top: 70px;
+	width: 50%;
+	margin: auto;
+		text-align: center;
+	
+}
+	.busqueda table {
+		width: 50%;
+		margin: auto;
+}
+
+
+}
+
+
+
+
+
+
